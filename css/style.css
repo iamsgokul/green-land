@@ -1,0 +1,248 @@
+
+*{
+	font-family: 'Josefin Sans', sans-serif;
+}
+#back {
+	background: #B0E3FF;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	/* transition: all .25s cubic-bezier(1, 0, 0.5, 1); */
+	background-image:url(../Mountain-Bottom.svg);
+	background-position: bottom;
+	background-size:100%;
+	background-repeat: no-repeat;
+
+}
+#back:after{
+	content:'';
+	bottom:0;
+	position:absolute;
+
+}
+.star {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 100%;
+}
+
+.star-1 {
+	transform: scale(1.2);
+border-radius:100%;
+	-webkit-animation: glow1 3s linear infinite;
+}
+
+@-webkit-keyframes glow1 {
+	0%, 100% {box-shadow: 0px 0px 10px 7px rgba(255, 215, 1, 0.59);}
+	50% {box-shadow: 0px 0px 2px 0px rgba(255, 215, 1, 0.59);}
+}
+
+#back #stars {
+	transform: translateY(-100%);
+	transition: all .25s ease-in;
+}
+
+#back .star {
+	opacity: 0;
+}
+
+#back ul li:nth-child(1) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(2) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(3) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(4) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(5) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(6) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(7) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+#back ul li:nth-child(8) {
+	transform: translateY(-2000%);
+	transition-delay: 0s;
+}
+
+#sun {
+	position: absolute;
+	top: 10%;
+	right: 25%;
+	z-index: 4;
+	display: block;
+	width: 160px;
+	height: 160px;
+	background: gold;
+	border-radius: 100%;
+	transform: translateY(1000%);
+}
+
+#back #sun {
+	transform: translateY(0);
+	transition-delay: .5s;
+}
+
+#back #cloud-container {
+	transform: translateX(0);
+	opacity: 1;
+	transition-delay: 1s;
+}
+#cloud-container {
+	position: absolute;
+	z-index: 9;
+	top: 10%;
+	width: 60%;
+	right: 0;
+	left: 0;
+	margin: auto;
+	transform: translateX(-100%);
+	transition: all .25s ease-in-out;
+	opacity: 0;
+}
+
+@media all and (max-width: 800px) {
+	#cloud-2 {
+		display: none;
+	}
+}
+
+#back .cloud {
+	transition: all 1s cubic-bezier(1.000, -0.110, 0.000, 0.935);
+	transition-delay: .5s;
+}
+
+#back #cloud-1 {transform: translateX(0) }
+#back #cloud-2 {transform: translateX(0)}
+#back #cloud-3 {transform: translateX(0)}
+
+#title {
+	position: fixed;
+	bottom: 16%;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+	font-weight: 100;
+	text-align: center;
+	color: #888;
+}
+
+#night {
+	text-shadow: 0px 0px 20px #fff;
+	color: rgba(255, 255, 255, 0.8)
+}
+
+.toggle:checked ~ #title {
+	color: #888;
+}
+
+.toggle:checked ~ #title #day {
+	color: gold;
+	text-shadow: 1px 1px 4px rgba(0,0,0,.5);
+}
+
+.toggle:checked ~ #title #night {
+	color: #888;
+}
+
+#by {
+	font-size: 12px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	opacity: 0.7;
+	transition: all .25s linear;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+.toggle:checked ~ h3 a {
+	color: #000;
+}
+
+.cloud-container {
+	transform: translateX(-600px);
+}
+
+#back .cloud-container {
+	transform: translateX(0)
+}
+
+.cloud {
+	position: relative;
+}
+
+#back #cloud-1 {
+	-webkit-animation: move-1 50s infinite alternate;
+	width:150px;
+}
+
+@-webkit-keyframes move-1 {
+	0% { left: 0%;  }
+	50% { left: 30%; }	
+	100% { left: 0%; }
+}
+
+#back #cloud-2 {
+	-webkit-animation: move-2 60s infinite alternate;
+	width:200px;
+}
+
+@-webkit-keyframes move-2 {
+	0% { left: 50%;  }
+	50% { left: 0%; }	
+	100% { left: 50%; }
+}
+
+#back #cloud-3 {
+	-webkit-animation: move-3 45s infinite alternate;
+	width:100px;
+}
+
+@-webkit-keyframes move-3 {
+	0% { left: 0%;  }
+	50% { left: 45%; }	
+	100% { left: 0%; }
+}
+
+.thank-msg {
+    width: 100%;
+    position: relative;
+    top: 35%;
+    padding: 0 30%;
+    box-sizing: border-box;
+}
+
+.thank-msg h1{
+font-size:34px;
+}
+
+.thank-msg p{
+font-size:20px;
+line-height: 24px;
+}
